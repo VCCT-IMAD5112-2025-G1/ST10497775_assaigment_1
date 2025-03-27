@@ -43,17 +43,18 @@
         android:id="@+id/ResetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="485dp"
-        android:layout_marginEnd="162dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:drawable/alert_light_frame"
         android:text="RESET"
         android:textSize="29sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/ConfirmButton"
+        app:layout_constraintTop_toBottomOf="@+id/Output_View" />
 
     <TextView
         android:id="@+id/textView3"
@@ -62,7 +63,7 @@
         android:layout_marginTop="13dp"
         android:layout_marginBottom="411dp"
         android:background="@android:drawable/alert_light_frame"
-        android:text="&quot;What time of the day is it? (Morning, Mid-morning, Lunch, Afternoon, Snack, Dinner)&quot; "
+        android:text="&quot;What time of the day is it? (e.gMorning, Mid-morning, Lunch, Afternoon, Snack, Dinner)&quot; "
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold|italic"
@@ -89,5 +90,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/Output_View"
+        android:layout_width="373dp"
+        android:layout_height="262dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="7dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:text="You can Eat"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/ConfirmButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputText" />
+
+    <Button
+        android:id="@+id/ConfirmButton"
+        android:layout_width="167dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:text="Confirm"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ResetButton"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Output_View" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

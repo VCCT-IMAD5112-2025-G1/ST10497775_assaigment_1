@@ -1,5 +1,6 @@
 package za.co.varsitycollege.st10407775.st10497775_assigment_1
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -13,7 +14,9 @@ import com.google.android.material.textfield.TextInputEditText
 class MainActivity : AppCompatActivity() {
     private lateinit var resetButton: Button
     private lateinit var inputText: EditText
+    private lateinit var ConfirmButton: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,11 +27,13 @@ class MainActivity : AppCompatActivity() {
         val Afternoon=listOf("Tea with biscuits","Smoothie","Donuts")
         val Dinner=listOf("Rice and steak","Burger and chips")
         val snack=listOf("Chips","Fries","P and G sandwhich")
-        if (inputText==Morning){
-
-        }
         resetButton = findViewById(R.id.ResetButton)
         inputText = findViewById(R.id.InputText)
+        ConfirmButton= findViewById(R.id.ConfirmButton)
+        ConfirmButton.setOnClickListener {
+            inputText.isClickable
+            Toast.makeText(this, "The Menu has appeared", Toast.LENGTH_SHORT).show()
+        }
 
         resetButton.setOnClickListener {
             inputText.text.clear()
