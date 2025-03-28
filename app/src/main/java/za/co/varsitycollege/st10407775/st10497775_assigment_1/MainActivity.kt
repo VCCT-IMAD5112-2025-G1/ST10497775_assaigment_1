@@ -20,12 +20,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val Morning = listOf("cereal", "Pancakes", "Bacon and eggs", "Omelet")
-        val MidMorning = listOf("Fruit salad", "Yogurt", "Protein bar",)
-        val Lunch = listOf("Pasta", "chicken and rice", "sandwhich",)
-        val Afternoon = listOf("Tea with biscuits", "Smoothie", "Donuts")
-        val Dinner =listOf("Rice and steak", "Burger and chips")
-        val snack =listOf("Chips", "Fries", "P and G sandwhich")
+        val Morning = listOf("cereal", "Pancakes", "Bacon and eggs", "Omelet","Tea and Bread","Coffee","sausages with eggs","scrambled eggs")
+        val MidMorning = listOf("Fruit salad", "Yogurt", "Protein bar","Samosas","Cheese and crackers","Cereal","Pringles","Hot Chocolate")
+        val Lunch = listOf("Pasta", "chicken and rice", "sandwich","Rice and Meat","fries and chicken","Chicken wraps","beef Wraps","Sushi","Mac & cheese","Tacos")
+        val Afternoon = listOf("Tea with biscuits", "Smoothie", "Donuts","Avocado ","Mini sandwich (turkey & cheese)","Chicken Or Beef Pie","Chicken Soup")
+        val Dinner =listOf("Rice and steak", "Burger and chips","Wraps","Kentucky fried chicken","Steak with mashed potatoes","Fish and chips","Ramen with eggs","Lasagna")
+        val snack =listOf("Chips", "Fries", "P and G sandwich","orange juice and biscuits","Chocolate","Popcorn","Grapes","Banana","Apples","Hard-boiled eggs","samosas")
         resetButton = findViewById(R.id.ResetButton)
         OutputView = findViewById<TextView>(R.id.Output_View)
         inputText = findViewById(R.id.InputText)
@@ -33,22 +33,21 @@ class MainActivity : AppCompatActivity() {
         ConfirmButton.setOnClickListener {
             if (inputText.text.toString() == "Morning"){
                 OutputView.text = "Good Morning, Here is What you can eat${Morning}"
-            } else {
-                inputText.text.toString() == "MidMorning"
-                OutputView.text = "Hi,Here is what you can eat ${MidMorning}"}
-                    if (inputText.text.toString() == "Lunch") {
-                        OutputView.text = "Here is What you can eat for lunch${Lunch}"
-                    } else {
-                        inputText.text.toString() == "Afternoon"
+            }else if(
+                inputText.text.toString() == "MidMorning"){
+                OutputView.text = "Hi,Here is what you can eat ${MidMorning}"} else if(
+                    inputText.text.toString() == "Lunch"){
+                        OutputView.text = "Here is What you can eat for lunch${Lunch}"}
+            else if(inputText.text.toString() == "Afternoon"){
                         OutputView.text = "Good Afternoon,Here What you can eat${Afternoon}"
-                    }
-                        if (inputText.text.toString() == "Dinner") {
-                            OutputView.text = "Good Evening,Here is what you can eat${Dinner}"
-                        } else {
-                            inputText.text.toString() == "snack"
+                    } else if(inputText.text.toString() == "Dinner"){
+                            OutputView.text = "Good Evening,Here is what you can eat${Dinner}"}
+            else if(inputText.text.toString() == "snack"){
                             OutputView.text = "it's Snack Time,Time to bite${snack}"}
-                                if (inputText.text.toString() == "") {
-                                    OutputView.text = "Please Enter The Correct Text Recomended Above"}
+            else{
+                                inputText.text.toString() == ""
+                    OutputView.text = "Please Enter The Correct Text Recomended Above"}
+            }
             Toast.makeText(this, "The Menu has appeared", Toast.LENGTH_SHORT).show()
 
                             resetButton.setOnClickListener {
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                         }
 
                     }
-                }
+
 
 
 
