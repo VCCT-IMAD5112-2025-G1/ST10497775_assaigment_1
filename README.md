@@ -26,9 +26,10 @@ Right Meal, Right Time
 Right Meal, Right Time is an app that recommends the best meals for any time of the day 
 How does it work?
 The app recommends meals based on the time of day
+# App Design
+I chose fruits as the background picture for Right Meal Right Time because they symbolize health, nutrition, and balanced eating, which aligns with the app’s purpose of recommending the right meal at the right time. Fruits are also visually appealing and create a fresh and inviting look for the app.
 
-
-![Screenshot 2025-03-29 223934](https://github.com/user-attachments/assets/d5074a45-8b47-479e-804b-f99fb61357ee),![Screenshot 2025-03-30 212808](https://github.com/user-attachments/assets/5891c5f2-32b3-4a18-a05e-178504671069),![Screenshot 2025-03-30 212825](https://github.com/user-attachments/assets/4cb97727-3c86-43e7-89f0-77c17e46bc6f),![Screenshot 2025-03-31 182731](https://github.com/user-attachments/assets/dc6b783c-360d-41ea-bf3c-8ea6bfdcacf2)
+![Screenshot 2025-03-29 223934](https://github.com/user-attachments/assets/d5074a45-8b47-479e-804b-f99fb61357ee)
 
 
 
